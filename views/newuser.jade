@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  p Añadir Usuarios
+  form#formAddUser(name="adduser",method="post",action="/adduser")
+    input#inputUserName(type="text", placeholder="username", name="username")
+    input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+    button#btnSubmit(type="submit") submit
+  br
+  p Borrar Usuarios
+  form#formDeleteUser(name="deluser",method="post",action="/deluser")
+    input#inputUserName(type="text", placeholder="username", name="username")
+    button#btnSubmit(type="submit") submit
+    
